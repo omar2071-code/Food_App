@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food_app/core/utils/asset.dart';
 import 'package:food_app/core/utils/colors_app.dart';
-import 'package:food_app/feature/home/presentation/views/home_view.dart';
+import 'package:food_app/feature/layout/presentation/manager/layout_cubit/layout_cubit.dart';
+import 'package:food_app/feature/layout/presentation/views/layout_app.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -35,7 +37,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeView()),
+        MaterialPageRoute(
+          builder:
+              (context) => BlocProvider(
+                create: (context) => LayoutCubit(),
+                child: LayoutApp(),
+              ),
+        ),
       );
     });
   }

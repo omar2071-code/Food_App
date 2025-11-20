@@ -36,7 +36,16 @@ class LayoutApp extends StatelessWidget {
 
                   currentIndex: cubit.currentIndex,
                   onTap: (value) {
-                    cubit.changeBottom(value);
+                    if (value == 3) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => cubit.screen[3],
+                        ),
+                      );
+                    } else {
+                      cubit.changeBottom(value);
+                    }
                   },
                   items: cubit.items,
                 ),

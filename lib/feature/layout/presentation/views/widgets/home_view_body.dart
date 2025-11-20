@@ -22,7 +22,7 @@ class HomeViewBody extends StatelessWidget {
             style: GoogleFonts.poppins(
               fontWeight: FontWeight.w500,
               fontSize: 18,
-              color: ColorsApp.kGrayColr.withOpacity(.7),
+              color: ColorsApp.kGrayColor.withOpacity(.7),
             ),
           ),
           SizedBox(height: 17),

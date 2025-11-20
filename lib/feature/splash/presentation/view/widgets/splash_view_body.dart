@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_app/core/utils/asset.dart';
+import 'package:food_app/core/utils/asset_data.dart';
 import 'package:food_app/core/utils/colors_app.dart';
 import 'package:food_app/feature/layout/presentation/manager/layout_cubit/layout_cubit.dart';
 import 'package:food_app/feature/layout/presentation/views/layout_app.dart';

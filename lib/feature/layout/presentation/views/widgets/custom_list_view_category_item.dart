@@ -14,7 +14,7 @@ class CustomListViewCategoryItem extends StatelessWidget {
         itemBuilder:
             (context, index) => Padding(
               padding: const EdgeInsets.only(left: 10.0),
-              child: CustomCategoryItem(),
+              child: CustomCategoryItemButton(text: 'All', onTap: () {}),
             ),
       ),
     );

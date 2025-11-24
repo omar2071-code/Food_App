@@ -43,11 +43,11 @@ class LayoutApp extends StatelessWidget {
                           builder: (context) => cubit.screen[3],
                         ),
                       );
-                    } else if (value == 1) {
+                    } else if (value == 2) {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => cubit.screen[1],
+                          builder: (context) => cubit.screen[2],
                         ),
                       );
                     } else {

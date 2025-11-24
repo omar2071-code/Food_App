@@ -3,13 +3,19 @@ import 'package:food_app/feature/layout/presentation/views/widgets/custom_catego
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomTotalPrice extends StatelessWidget {
-  const CustomTotalPrice({
+  CustomTotalPrice({
     super.key,
     required this.buttonText,
     required this.onTap,
+    this.heightContainer = 50,
+    this.raduisContainer = 20,
+    this.widthContainer = 150,
   });
   final String buttonText;
   final void Function() onTap;
+  double? widthContainer;
+  double? heightContainer;
+  double? raduisContainer;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -37,9 +43,9 @@ class CustomTotalPrice extends StatelessWidget {
         CustomCategoryItemButton(
           text: buttonText,
           onTap: onTap,
-          width: 150,
-          height: 50,
-          raduis: 20,
+          width: widthContainer!,
+          height: heightContainer!,
+          raduis: raduisContainer!,
         ),
       ],
     );

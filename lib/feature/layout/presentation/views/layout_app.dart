@@ -43,6 +43,13 @@ class LayoutApp extends StatelessWidget {
                           builder: (context) => cubit.screen[3],
                         ),
                       );
+                    } else if (value == 1) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => cubit.screen[1],
+                        ),
+                      );
                     } else {
                       cubit.changeBottom(value);
                     }

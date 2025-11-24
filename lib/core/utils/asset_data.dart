@@ -4,6 +4,7 @@ abstract class AssetData {
   static const cartImage = 'assets/images/image.png';
   static const dollarImage = 'assets/images/dollar.png';
   static const visaImage = 'assets/images/visa.png';
+  static const profileImage = 'assets/images/profile.png';
 }
 
 //assets/images/image.png"

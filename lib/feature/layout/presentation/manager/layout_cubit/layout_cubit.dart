@@ -19,15 +19,21 @@ class LayoutCubit extends Cubit<LayoutState> {
   //screen (home-productDetails-cart-checkout-profile)
   List<Widget> screen = [
     HomeView(),
-    ProductDetailsView(),
     CartView(),
+    ProductDetailsView(),
     ProfileView(),
   ];
   List<BottomNavigationBarItem> items = [
-    BottomNavigationBarItem(icon: Icon(Icons.home), label: "b"),
-    BottomNavigationBarItem(icon: Icon(Icons.percent), label: "b"),
-    BottomNavigationBarItem(icon: Icon(Icons.dangerous), label: "s"),
-    BottomNavigationBarItem(icon: Icon(Icons.safety_check), label: "f"),
+    BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.shopping_basket_outlined),
+      label: "",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.messenger_outline_sharp),
+      label: "",
+    ),
+    BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
   ];
   void changeBottom(int value) {
     currentIndex = value;

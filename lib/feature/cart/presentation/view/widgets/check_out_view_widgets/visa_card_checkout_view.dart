@@ -4,15 +4,22 @@ import 'package:food_app/core/utils/colors_app.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomVisaCheckOut extends StatelessWidget {
-  const CustomVisaCheckOut({super.key});
-
+  CustomVisaCheckOut({
+    super.key,
+    this.borderRadius = 20,
+    this.height = 80,
+    this.backgroundColor = ColorsApp.kWhiteColor,
+  });
+  double? borderRadius;
+  double? height;
+  Color? backgroundColor;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      height: height,
       decoration: BoxDecoration(
         color: Color(0xffF3F4F6),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(borderRadius!),
       ),
       child: Row(
         children: [
@@ -42,14 +49,11 @@ class CustomVisaCheckOut extends StatelessWidget {
           Spacer(flex: 5),
           CircleAvatar(
             radius: 10,
-            backgroundColor: ColorsApp.kWhiteColor,
+            backgroundColor: backgroundColor,
             child: CircleAvatar(
               backgroundColor: Color(0xffF3F4F6),
               radius: 8,
-              child: CircleAvatar(
-                backgroundColor: ColorsApp.kWhiteColor,
-                radius: 5,
-              ),
+              child: CircleAvatar(backgroundColor: backgroundColor, radius: 5),
             ),
           ),
           Spacer(flex: 1),

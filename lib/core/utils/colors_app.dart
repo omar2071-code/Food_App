@@ -6,4 +6,5 @@ abstract class ColorsApp {
   static const kGrayColor = Color(0xff6A6A6A);
   static const kRedColor = Color(0xffEF2A39);
 }
+
 //Color(0xffEF2A39)
